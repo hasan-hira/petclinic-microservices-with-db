@@ -8,9 +8,3 @@
   - name: show results
     debug: msg="{{ item.stdout }}"
     with_items: "{{ output.results }}"
-```
-- Change the `port of url field` in the `test_owners_all_headless.py, test_owners_register_headless.py and test_veterinarians_headless.py` as `30001` as below.
-```py
-...
-APP_IP = os.environ['MASTER_PUBLIC_IP']
-url = "http://"+APP_IP.strip()+":30001/"
